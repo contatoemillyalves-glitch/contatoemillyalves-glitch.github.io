@@ -1,214 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Emilly Alves</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emilly Alves — Portfólio</title>
+  <style>
+    :root{
+      --bg:#000;
+      --fg:#fff;
+      --muted:#bfbfbf;
+      --line:#2a2a2a;
+      --accent:#f1f1e6; /* off-white da referência */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Helvetica, Arial, sans-serif}
+    a{color:var(--fg);text-decoration:none}
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
-}
+    /* HEADER (igual referência: barra larga em blocos) */
+    header{
+      position:sticky;top:0;z-index:10;
+      display:grid;grid-template-columns: 1fr 160px 160px 200px;
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg,#0a0a0a,#000);
+    }
+    header .brand{padding:22px 28px;letter-spacing:.08em}
+    header .nav{
+      display:flex;align-items:center;justify-content:center;
+      border-left:1px solid var(--line);
+      font-size:13px;letter-spacing:.12em
+    }
+    header .nav.active{background:var(--accent);color:#000}
 
-body {
-  background: #000;
-  color: #fff;
-}
+    /* HERO */
+    .hero{
+      min-height:90vh;
+      display:grid;grid-template-columns:1fr 420px;
+      gap:24px;padding:80px 28px 40px;
+    }
+    .hero h1{
+      font-size:clamp(56px,8vw,120px);
+      line-height:.95;margin:0;letter-spacing:.04em
+    }
+    .hero .side{
+      align-self:end;color:var(--muted);font-size:14px;line-height:1.6
+    }
 
-/* ===== HEADER GRID ===== */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
-  border-bottom: 1px solid #222;
-}
+    /* LISTA DE TRABALHOS (scroll vertical, cards full-width) */
+    .works{border-top:1px solid var(--line)}
+    .work{
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:0;border-bottom:1px solid var(--line)
+    }
+    .work .info{padding:28px}
+    .work .info .tag{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+    .work .info h2{margin:12px 0 8px;font-size:22px;letter-spacing:.08em}
+    .work .info p{margin:0;color:var(--muted);max-width:520px}
+    .work .media{min-height:420px;background:#111}
 
-.hero-block {
-  border-right: 1px solid #222;
-  padding: 60px;
-  display: flex;
-  align-items: center;
-}
+    /* CV + CONTATO (mesma página) */
+    .cv{
+      padding:80px 28px;border-top:1px solid var(--line)
+    }
+    .cv-grid{
+      display:grid;grid-template-columns: 360px 1fr;gap:40px
+    }
+    .cv h3{
+      font-size:14px;letter-spacing:.14em;margin:0 0 12px
+    }
+    .cv .box{border-top:1px solid var(--line);padding-top:12px;margin-bottom:28px}
+    .cv .item{font-size:14px;line-height:1.6;color:var(--muted)}
+    .cv .exp h4{margin:0;font-size:14px;letter-spacing:.08em;color:var(--fg)}
+    .cv .exp .role{font-style:italic;color:var(--muted)}
+    .cv .exp ul{margin:8px 0 0 16px;color:var(--muted)}
 
-.hero-block:last-child {
-  border-right: none;
-}
+    /* FOOTER */
+    footer{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:24px 28px;border-top:1px solid var(--line);color:var(--muted)
+    }
 
-.hero h1 {
-  font-size: 96px;
-  text-transform: uppercase;
-  line-height: 0.95;
-}
-
-.hero p {
-  max-width: 420px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #ccc;
-}
-
-/* ===== PROJETOS FULLSCREEN ===== */
-.project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
-  border-bottom: 1px solid #222;
-  cursor: pointer;
-}
-
-.project img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-content {
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.project h2 {
-  font-size: 48px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.project p {
-  max-width: 420px;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-/* ===== CURRÍCULO ===== */
-.cv {
-  padding: 120px 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-}
-
-.cv h3 {
-  font-size: 28px;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-}
-
-.cv h4 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.cv p, .cv li {
-  color: #ccc;
-  line-height: 1.6;
-  margin-bottom: 6px;
-}
-
-ul {
-  list-style: none;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  padding: 40px 60px;
-  border-top: 1px solid #222;
-  font-size: 14px;
-  color: #777;
-}
-</style>
+    @media(max-width:900px){
+      header{grid-template-columns:1fr 120px 120px 160px}
+      .hero{grid-template-columns:1fr}
+      .work{grid-template-columns:1fr}
+      .cv-grid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HERO -->
+<header>
+  <div class="brand">EMILLY</div>
+  <div class="nav active">TRABALHOS</div>
+  <div class="nav">SOBRE</div>
+  <div class="nav">MODO: ESCURO</div>
+</header>
+
 <section class="hero">
-  <div class="hero-block">
-    <h1>Portfólio</h1>
-  </div>
-
-  <div class="hero-block">
-    <p>
-      Sou a Emilly, estudante de Publicidade e Propaganda,
-      e esses são os trabalhos que venho desenvolvendo ;)
-    </p>
-  </div>
+  <h1>SOU A EMILLY</h1>
+  <div class="side">ESSE É O PORTFÓLIO COM OS TRABALHOS QUE VENHO DESENVOLVENDO.</div>
 </section>
 
-<!-- PROJETOS -->
-<section class="project" onclick="location.href='projetos/social-media.html'">
-  <img src="assets/social-media/capa.jpg">
-  <div class="project-content">
-    <h2>Social Media</h2>
-    <p>
-      Criação de conteúdo e análise
-      de resultados para redes sociais.
-    </p>
-  </div>
+<section class="works">
+  <article class="work">
+    <div class="info">
+      <div class="tag">CAMPANHA</div>
+      <h2>MENINA USA VERMELHO</h2>
+      <p>Projeto desenvolvido para Shell, explorando narrativa visual e impacto de mensagem.</p>
+    </div>
+    <div class="media"></div>
+  </article>
+
+  <article class="work">
+    <div class="info">
+      <div class="tag">SOCIAL MEDIA</div>
+      <h2>CELEPAR</h2>
+      <p>Criação, planejamento e análise de conteúdos para redes sociais.</p>
+    </div>
+    <div class="media"></div>
+  </article>
 </section>
 
-<section class="project" onclick="location.href='projetos/audiovisual.html'">
-  <img src="assets/audiovisual/capa.jpg">
-  <div class="project-content">
-    <h2>Audiovisual</h2>
-    <p>
-      Produção, edição e direção de vídeos
-      para diferentes formatos digitais.
-    </p>
-  </div>
-</section>
-
-<!-- CURRÍCULO -->
 <section class="cv">
-  <div>
-    <h3>Currículo</h3>
+  <div class="cv-grid">
+    <div>
+      <h3>CV.</h3>
+      <div class="box item">(41) 9 8465-6032<br/>contatoemillyalves@gmail.com<br/>linkedin.com/in/emillydeoliveiraalves</div>
 
-    <h4>Experiências</h4>
-    <p><strong>Hotmilk</strong> — Estagiária de Marketing</p>
-    <p>Criação de peças, produção audiovisual, planejamento e pautas</p>
-    <p>2025 — Atual</p>
+      <h3>SKILLS</h3>
+      <div class="box item">Illustrator<br/>Photoshop<br/>Premiere Pro<br/>Meta Business Suite<br/>PowerPoint<br/>Excel<br/>RD Station</div>
 
-    <br>
+      <h3>FORMAÇÃO</h3>
+      <div class="box item">2024 — 2027<br/>Comunicação Social — Publicidade e Propaganda<br/>PUCPR</div>
+    </div>
 
-    <p><strong>Celepar</strong> — Estagiária de Marketing</p>
-    <p>Conteúdo para redes sociais, métricas, textos e eventos</p>
-    <p>2024 — 2025</p>
+    <div class="exp">
+      <h3>EXPERIÊNCIAS</h3>
+      <div class="box">
+        <h4>HOTMILK</h4>
+        <div class="role">Estagiária de Marketing</div>
+        <ul>
+          <li>Criação de peças para redes sociais e comunicação interna</li>
+          <li>Produção e apoio audiovisual</li>
+          <li>Planejamento de pautas e campanhas</li>
+        </ul>
+        <div class="item">2025 — Atual</div>
+      </div>
 
-    <br>
+      <div class="box">
+        <h4>CELEPAR</h4>
+        <div class="role">Estagiária de Marketing</div>
+        <ul>
+          <li>Criação, monitoramento e planejamento de conteúdos</li>
+          <li>Análise de métricas e tendências</li>
+        </ul>
+        <div class="item">2024 — 2025</div>
+      </div>
 
-    <p><strong>Coca-Cola FEMSA</strong> — Jovem Aprendiz</p>
-    <p>Serviços administrativos e materiais gráficos</p>
-    <p>2023 — 2024</p>
-
-    <h4>Skills</h4>
-    <ul>
-      <li>Illustrator</li>
-      <li>Photoshop</li>
-      <li>Premiere Pro</li>
-      <li>Meta Business Suite</li>
-      <li>Excel</li>
-      <li>RD Station</li>
-    </ul>
-
-    <h4>Formação</h4>
-    <p>Publicidade e Propaganda — PUCPR</p>
-    <p>2024 — 2027</p>
-  </div>
-
-  <div>
-    <h3>Contato</h3>
-    <p>(41) 9 8465-6032</p>
-    <p>contatoemillyalves@gmail.com</p>
-    <p>linkedin.com/in/emillydealves</p>
+      <div class="box">
+        <h4>COCA-COLA FEMSA</h4>
+        <div class="role">Jovem Aprendiz</div>
+        <ul>
+          <li>Serviços administrativos</li>
+          <li>Campanhas internas de segurança</li>
+        </ul>
+        <div class="item">2023 — 2024</div>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  © Emilly Alves
+  <div>© 2026</div>
+  <div>LINKEDIN · WHATSAPP</div>
 </footer>
 
 </body>
