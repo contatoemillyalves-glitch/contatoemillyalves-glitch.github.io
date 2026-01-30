@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Emilly Alves — Portfólio</title>
+<title>Emilly Alves</title>
 
 <style>
 * {
@@ -17,44 +17,44 @@ body {
   color: #fff;
 }
 
-/* HEADER */
-header {
+/* ===== HEADER GRID ===== */
+.hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #222;
 }
 
-.header-box {
+.hero-block {
+  border-right: 1px solid #222;
   padding: 60px;
-  border-right: 1px solid #333;
   display: flex;
   align-items: center;
 }
 
-.header-box:last-child {
+.hero-block:last-child {
   border-right: none;
 }
 
-header h1 {
+.hero h1 {
   font-size: 96px;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 0.95;
 }
 
-header p {
-  max-width: 400px;
+.hero p {
+  max-width: 420px;
   font-size: 16px;
   line-height: 1.6;
-  color: #bbb;
+  color: #ccc;
 }
 
-/* PROJETOS */
+/* ===== PROJETOS FULLSCREEN ===== */
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #222;
   cursor: pointer;
 }
 
@@ -64,132 +64,151 @@ header p {
   object-fit: cover;
 }
 
-.project-info {
+.project-content {
   padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.project-info h2 {
-  font-size: 40px;
+.project h2 {
+  font-size: 48px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
-.project-info p {
-  max-width: 400px;
-  color: #bbb;
+.project p {
+  max-width: 420px;
+  color: #ccc;
   line-height: 1.6;
 }
 
-/* CURRÍCULO + CONTATO */
+/* ===== CURRÍCULO ===== */
 .cv {
-  padding: 100px 60px;
+  padding: 120px 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
 
 .cv h3 {
+  font-size: 28px;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cv h4 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .cv p, .cv li {
-  color: #bbb;
+  color: #ccc;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 ul {
   list-style: none;
 }
 
+/* ===== FOOTER ===== */
 footer {
   padding: 40px 60px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #222;
+  font-size: 14px;
+  color: #777;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-box">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-block">
     <h1>Portfólio</h1>
   </div>
 
-  <div class="header-box">
+  <div class="hero-block">
     <p>
-      Sou estudante de Publicidade e Propaganda.
-      Esses são alguns dos trabalhos que venho desenvolvendo
-      em comunicação, social media e audiovisual.
+      Sou a Emilly, estudante de Publicidade e Propaganda,
+      e esses são os trabalhos que venho desenvolvendo ;)
     </p>
   </div>
-</header>
+</section>
 
-<!-- PROJETO 1 -->
+<!-- PROJETOS -->
 <section class="project" onclick="location.href='projetos/social-media.html'">
   <img src="assets/social-media/capa.jpg">
-  <div class="project-info">
+  <div class="project-content">
     <h2>Social Media</h2>
     <p>
-      Criação de conteúdo, planejamento e estratégias
-      para redes sociais.
+      Criação de conteúdo e análise
+      de resultados para redes sociais.
     </p>
   </div>
 </section>
 
-<!-- PROJETO 2 -->
 <section class="project" onclick="location.href='projetos/audiovisual.html'">
   <img src="assets/audiovisual/capa.jpg">
-  <div class="project-info">
+  <div class="project-content">
     <h2>Audiovisual</h2>
     <p>
-      Produção e edição de vídeos, reels e coberturas.
+      Produção, edição e direção de vídeos
+      para diferentes formatos digitais.
     </p>
   </div>
 </section>
 
-<!-- CURRÍCULO + CONTATO -->
+<!-- CURRÍCULO -->
 <section class="cv">
   <div>
     <h3>Currículo</h3>
-    <p><strong>Formação</strong></p>
-    <p>
-      Publicidade e Propaganda — PUCPR<br>
-      2024 — 2027
-    </p>
 
-    <p><strong>Experiências</strong></p>
-    <p>
-      Hotmilk — Estágio em Marketing<br>
-      Celepar — Estágio em Marketing<br>
-      Coca-Cola FEMSA — Jovem Aprendiz
-    </p>
+    <h4>Experiências</h4>
+    <p><strong>Hotmilk</strong> — Estagiária de Marketing</p>
+    <p>Criação de peças, produção audiovisual, planejamento e pautas</p>
+    <p>2025 — Atual</p>
 
-    <p><strong>Skills</strong></p>
+    <br>
+
+    <p><strong>Celepar</strong> — Estagiária de Marketing</p>
+    <p>Conteúdo para redes sociais, métricas, textos e eventos</p>
+    <p>2024 — 2025</p>
+
+    <br>
+
+    <p><strong>Coca-Cola FEMSA</strong> — Jovem Aprendiz</p>
+    <p>Serviços administrativos e materiais gráficos</p>
+    <p>2023 — 2024</p>
+
+    <h4>Skills</h4>
     <ul>
       <li>Illustrator</li>
       <li>Photoshop</li>
       <li>Premiere Pro</li>
-      <li>Social Media</li>
-      <li>Planejamento</li>
+      <li>Meta Business Suite</li>
+      <li>Excel</li>
+      <li>RD Station</li>
     </ul>
+
+    <h4>Formação</h4>
+    <p>Publicidade e Propaganda — PUCPR</p>
+    <p>2024 — 2027</p>
   </div>
 
   <div>
     <h3>Contato</h3>
-    <p>Email: contatoemillyalves@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/emillydealves</p>
-    <p>Instagram: @seuuser</p>
+    <p>(41) 9 8465-6032</p>
+    <p>contatoemillyalves@gmail.com</p>
+    <p>linkedin.com/in/emillydealves</p>
   </div>
 </section>
 
 <footer>
-  <p>© Emilly Alves</p>
+  © Emilly Alves
 </footer>
 
 </body>
