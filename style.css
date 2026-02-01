@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-/* FONTE */
+/* BASE */
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  color: #000000;
+  background: #000;
+  color: #f8f6f0;
 }
 
 /* HEADER */
@@ -19,60 +19,59 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(248, 246, 240, 0.15);
 }
 
 .header-left {
-  font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: -10px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .header-right a {
   margin-left: 32px;
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
+  color: #f8f6f0;
   letter-spacing: 1px;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 /* HERO */
 .hero {
-  padding: 120px 48px 80px 48px;
+  padding: 140px 48px 100px;
 }
 
 .hero h1 {
   font-size: 96px;
-  font-weight: 700;
   line-height: 0.95;
-  letter-spacing: -20px;
-}
-
-.hero p {
-  margin-top: 24px;
-  font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: -15px;
   text-transform: uppercase;
 }
 
-/* PROJECTS GRID */
+.hero p {
+  margin-top: 16px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* PROJECTS */
 .projects {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 /* PROJECT CARD */
 .project {
-  width: 100%;
-  min-height: 100vh;
   position: relative;
+  width: 100%;
+  height: 100vh;
   text-decoration: none;
-  color: #fff;
+  color: #f8f6f0;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
+  border-top: 1px solid rgba(248, 246, 240, 0.15);
 }
 
-/* IMAGEM / PDF */
 .project img,
 .project embed {
   position: absolute;
@@ -82,53 +81,105 @@ body {
   object-fit: cover;
 }
 
-/* OVERLAY */
 .project::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
 }
 
-/* TEXTO DO PROJETO */
 .project-info {
-  position: relative;
-  padding: 48px;
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
   z-index: 2;
 }
 
 .project-info h2 {
-  font-size: 48px;
+  font-size: 40px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .project-info p {
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: 8px;
   max-width: 420px;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
-/* PLACEHOLDER */
-.placeholder {
-  position: absolute;
-  inset: 0;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  letter-spacing: 2px;
+/* PROJECT PAGE */
+.project-page {
+  padding-top: 120px;
 }
 
-/* RESPONSIVO */
+.project-hero {
+  padding: 80px 48px 40px;
+}
+
+.project-hero h1 {
+  font-size: 72px;
+  letter-spacing: -12px;
+}
+
+.project-hero h2 {
+  margin-top: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.project-short {
+  margin-top: 16px;
+  max-width: 520px;
+  font-size: 14px;
+}
+
+/* TEXTO */
+.project-text {
+  padding: 40px 48px;
+  max-width: 720px;
+}
+
+/* PDF */
+.project-pdf {
+  width: 100%;
+  height: 90vh;
+  border-top: 1px solid rgba(248, 246, 240, 0.15);
+  border-bottom: 1px solid rgba(248, 246, 240, 0.15);
+}
+
+.project-pdf embed {
+  width: 100%;
+  height: 100%;
+}
+
+/* BOTÃO */
+.project-links {
+  padding: 48px;
+}
+
+.external-link {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid #f8f6f0;
+  color: #f8f6f0;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.external-link:hover {
+  background: #f8f6f0;
+  color: #000;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 56px;
     letter-spacing: -8px;
-  }
-
-  .project-info h2 {
-    font-size: 32px;
   }
 }
