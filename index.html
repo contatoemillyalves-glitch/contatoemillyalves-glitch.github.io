@@ -1,180 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emilly Alves — Portfólio</title>
-  <style>
-    :root{
-      --bg:#000;
-      --fg:#fff;
-      --muted:#bfbfbf;
-      --line:#2a2a2a;
-      --accent:#f1f1e6; /* off-white da referência */
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Helvetica, Arial, sans-serif}
-    a{color:var(--fg);text-decoration:none}
-
-    /* HEADER (igual referência: barra larga em blocos) */
-    header{
-      position:sticky;top:0;z-index:10;
-      display:grid;grid-template-columns: 1fr 160px 160px 200px;
-      border-bottom:1px solid var(--line);
-      background:linear-gradient(180deg,#0a0a0a,#000);
-    }
-    header .brand{padding:22px 28px;letter-spacing:.08em}
-    header .nav{
-      display:flex;align-items:center;justify-content:center;
-      border-left:1px solid var(--line);
-      font-size:13px;letter-spacing:.12em
-    }
-    header .nav.active{background:var(--accent);color:#000}
-
-    /* HERO */
-    .hero{
-      min-height:90vh;
-      display:grid;grid-template-columns:1fr 420px;
-      gap:24px;padding:80px 28px 40px;
-    }
-    .hero h1{
-      font-size:clamp(56px,8vw,120px);
-      line-height:.95;margin:0;letter-spacing:.04em
-    }
-    .hero .side{
-      align-self:end;color:var(--muted);font-size:14px;line-height:1.6
-    }
-
-    /* LISTA DE TRABALHOS (scroll vertical, cards full-width) */
-    .works{border-top:1px solid var(--line)}
-    .work{
-      display:grid;grid-template-columns:1fr 1fr;
-      gap:0;border-bottom:1px solid var(--line)
-    }
-    .work .info{padding:28px}
-    .work .info .tag{font-size:12px;letter-spacing:.12em;color:var(--muted)}
-    .work .info h2{margin:12px 0 8px;font-size:22px;letter-spacing:.08em}
-    .work .info p{margin:0;color:var(--muted);max-width:520px}
-    .work .media{min-height:420px;background:#111}
-
-    /* CV + CONTATO (mesma página) */
-    .cv{
-      padding:80px 28px;border-top:1px solid var(--line)
-    }
-    .cv-grid{
-      display:grid;grid-template-columns: 360px 1fr;gap:40px
-    }
-    .cv h3{
-      font-size:14px;letter-spacing:.14em;margin:0 0 12px
-    }
-    .cv .box{border-top:1px solid var(--line);padding-top:12px;margin-bottom:28px}
-    .cv .item{font-size:14px;line-height:1.6;color:var(--muted)}
-    .cv .exp h4{margin:0;font-size:14px;letter-spacing:.08em;color:var(--fg)}
-    .cv .exp .role{font-style:italic;color:var(--muted)}
-    .cv .exp ul{margin:8px 0 0 16px;color:var(--muted)}
-
-    /* FOOTER */
-    footer{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:24px 28px;border-top:1px solid var(--line);color:var(--muted)
-    }
-
-    @media(max-width:900px){
-      header{grid-template-columns:1fr 120px 120px 160px}
-      .hero{grid-template-columns:1fr}
-      .work{grid-template-columns:1fr}
-      .cv-grid{grid-template-columns:1fr}
-    }
-  </style>
+  <title>Portfolio — Emilly Alves</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="header">
+    <div class="header-left">EMILLY ALVES</div>
+    <nav class="header-right">
+      <a href="index.html">TRABALHOS</a>
+      <a href="sobre.html">SOBRE</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="brand">EMILLY ALVES</div>
-  <a class="nav active" href="#top">TRABALHOS</a>
-  <a class="nav" href="sobre.html">SOBRE</a>
-  
-</header>
+  <section class="hero">
+    <h1>
+      <span>PORTFOLIO</span><br />
+      EMILLY ALVES
+    </h1>
+    <p>VEJA OS TRABALHOS QUE VENHO DESENVOLVENDO ;)</p>
+  </section>
 
-<a id="top"></a>
-<section class="hero">
-  <h1>PORTFOLIO<br/>EMILLY ALVES</h1>
-  <div class="side">VEJA OS TRABALHOS QUE VENHO DESENVOLVENDO ;)</div>
-</section>
+  <main class="projects">
 
-<section class="works">
-  <article class="work">
-    <div class="info">
-      <div class="tag">CAMPANHA</div>
-      <h2>MENINA USA VERMELHO</h2>
-      <p>Projeto desenvolvido para Shell, explorando narrativa visual e impacto de mensagem.</p>
-    </div>
-    <div class="media"></div>
-  </article>
-
-  <article class="work">
-    <div class="info">
-      <div class="tag">SOCIAL MEDIA</div>
-      <h2>CELEPAR</h2>
-      <p>Criação, planejamento e análise de conteúdos para redes sociais.</p>
-    </div>
-    <div class="media"></div>
-  </article>
-</section>
-
-<section class="cv">
-  <div class="cv-grid">
-    <div>
-      <h3>CV.</h3>
-      <div class="box item">(41) 9 8465-6032<br/>contatoemillyalves@gmail.com<br/>linkedin.com/in/emillydeoliveiraalves</div>
-
-      <h3>SKILLS</h3>
-      <div class="box item">Illustrator<br/>Photoshop<br/>Premiere Pro<br/>Meta Business Suite<br/>PowerPoint<br/>Excel<br/>RD Station</div>
-
-      <h3>FORMAÇÃO</h3>
-      <div class="box item">2024 — 2027<br/>Comunicação Social — Publicidade e Propaganda<br/>PUCPR</div>
-    </div>
-
-    <div class="exp">
-      <h3>EXPERIÊNCIAS</h3>
-      <div class="box">
-        <h4>HOTMILK</h4>
-        <div class="role">Estagiária de Marketing</div>
-        <ul>
-          <li>Criação de peças para redes sociais e comunicação interna</li>
-          <li>Produção e apoio audiovisual</li>
-          <li>Planejamento de pautas e campanhas</li>
-        </ul>
-        <div class="item">2025 — Atual</div>
+    <!-- DESGOSTO -->
+    <a href="trabalhos/desgosto.html" class="project">
+      <embed src="assets/planejamento/pdfs/DESGOSTO  APRESENTAÇÃO FINAL (2).pdf" type="application/pdf" />
+      <div class="project-info">
+        <h2>Desgosto</h2>
+        <p>Planejamento de comunicação e mídia para marca streetwear.</p>
       </div>
+    </a>
 
-      <div class="box">
-        <h4>CELEPAR</h4>
-        <div class="role">Estagiária de Marketing</div>
-        <ul>
-          <li>Criação, monitoramento e planejamento de conteúdos</li>
-          <li>Análise de métricas e tendências</li>
-        </ul>
-        <div class="item">2024 — 2025</div>
+    <!-- DANILO TAKIGAWA -->
+    <a href="trabalhos/danilo-takigawa.html" class="project">
+      <img src="assets/comunicação integrada/pdfs/ebook danPrancheta 1.png" />
+      <div class="project-info">
+        <h2>Danilo Takigawa</h2>
+        <p>Ebook e conteúdos para redes sociais.</p>
       </div>
+    </a>
 
-      <div class="box">
-        <h4>COCA-COLA FEMSA</h4>
-        <div class="role">Jovem Aprendiz</div>
-        <ul>
-          <li>Serviços administrativos</li>
-          <li>Campanhas internas de segurança</li>
-        </ul>
-        <div class="item">2023 — 2024</div>
+    <!-- TOPO CHICO -->
+    <a href="trabalhos/topo-chico.html" class="project">
+      <img src="assets/topo chico/Folder TPC Mockup.png" />
+      <div class="project-info">
+        <h2>Topo Chico</h2>
+        <p>Campanha publicitária.</p>
       </div>
-    </div>
-  </div>
-</section>
+    </a>
 
-<footer>
-  <div>© 2026</div>
-  <div>LINKEDIN · WHATSAPP</div>
-</footer>
+    <!-- SOCIAL MEDIA -->
+    <a href="trabalhos/social-media.html" class="project">
+      <div class="placeholder">CAPA EM BREVE</div>
+      <div class="project-info">
+        <h2>Social Media</h2>
+        <p>Criação de posts para redes sociais.</p>
+      </div>
+    </a>
+
+    <!-- AUDIOVISUAL -->
+    <a href="trabalhos/audiovisual.html" class="project">
+      <div class="placeholder">CAPA EM BREVE</div>
+      <div class="project-info">
+        <h2>Audiovisual</h2>
+        <p>Captação, edição e roteirização.</p>
+      </div>
+    </a>
+
+    <!-- ARTES DIVERSAS -->
+    <a href="trabalhos/artes-diversas.html" class="project">
+      <div class="placeholder">CAPA EM BREVE</div>
+      <div class="project-info">
+        <h2>Artes Diversas</h2>
+        <p>Peças gráficas e criativas.</p>
+      </div>
+    </a>
+
+  </main>
 
 </body>
 </html>
