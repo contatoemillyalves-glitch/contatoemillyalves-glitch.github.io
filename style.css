@@ -94,4 +94,59 @@ body {
 }
 
 .project-info h2 {
-  font-size: 32p
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.project-info p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* PÁGINA DO PROJETO */
+.project {
+  padding-top: 120px;
+}
+
+.project-header {
+  padding: 40px;
+}
+
+.project-header h2 {
+  font-size: 48px;
+  letter-spacing: -10px;
+  margin-bottom: 16px;
+}
+
+.pdf-section {
+  width: 100%;
+  height: 85vh;
+  border-top: 1px solid #f8f6f020;
+  border-bottom: 1px solid #f8f6f020;
+}
+
+.pdf-section iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* BOTÃO */
+.extras {
+  padding: 60px 40px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid #f8f6f0;
+  color: #f8f6f0;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #f8f6f0;
+  color: #000;
+}
