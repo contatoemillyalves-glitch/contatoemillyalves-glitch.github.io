@@ -91,9 +91,9 @@ body {
 
 .project-subtitle {
   margin-top: 24px;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 1px;
-  max-width: 520px;
+  text-transform: uppercase;
 }
 
 /* BOX */
