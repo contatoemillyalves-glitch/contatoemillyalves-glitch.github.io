@@ -129,3 +129,81 @@ body {
     font-size: 28px;
   }
 }
+
+/* =========================
+   PROJECT PAGE — DESGOSTO
+========================= */
+
+.project-page {
+  padding-top: 160px; /* espaço por causa do header fixo */
+  background: #000;
+  color: #f8f6f0;
+}
+
+/* HERO */
+.project-hero {
+  padding: 0 64px 120px;
+  max-width: 1200px;
+}
+
+.project-hero h1 {
+  font-size: 110px;
+  letter-spacing: -4px;
+  margin-bottom: 24px;
+}
+
+.project-hero h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.project-hero p {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* PDF */
+.project-pdf {
+  padding: 0 64px;
+}
+
+.project-pdf embed {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid #f8f6f0;
+}
+
+/* LINK */
+.project-links {
+  padding: 120px 64px;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 20px 48px;
+  border: 1px solid #f8f6f0;
+  color: #f8f6f0;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.project-button:hover {
+  background: #f8f6f0;
+  color: #000;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .project-hero h1 {
+    font-size: 56px;
+  }
+
+  .project-pdf embed {
+    height: 70vh;
+  }
+}
