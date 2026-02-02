@@ -1,15 +1,17 @@
 <body>
 
-  <!-- HEADER (já existe, não mexe) -->
+  <!-- HEADER (não mexe) -->
   <header class="header">
     ...
   </header>
 
   <main class="project-page">
 
-    <!-- CAPA -->
-    <section class="project-cover">
-      <img src="../assets/planejamento/pdfs/CAPA DESGOSTO.png" alt="Desgosto">
+    <!-- CAPA COM MARGEM -->
+    <section class="project-cover-wrapper">
+      <section class="project-cover">
+        <img src="../assets/planejamento/pdfs/CAPA DESGOSTO.png" alt="Desgosto">
+      </section>
     </section>
 
     <!-- TÍTULO -->
@@ -17,28 +19,32 @@
       <h1>DESGOSTO</h1>
     </section>
 
-    <!-- BOX DE SUBTÍTULO + DESCRIÇÃO CURTA -->
+    <!-- BOX DE INFO -->
     <section class="project-info-box">
-      <h2>Subtítulo do projeto</h2>
+      <h2>Projeto acadêmico</h2>
       <p>
-        Texto curto explicando o conceito do projeto.
-      </p>
-      <p>
-        Texto mais longo explicando o processo,
-        referências, desenvolvimento e resultado.
+        Projeto acadêmico realizado com cliente real curitibano,
+        onde foram desenvolvidas ações estratégicas de posicionamento
+        e cronograma de impulsionamento de mídia offline.
       </p>
     </section>
 
     <!-- PDF -->
     <section class="project-pdf">
-      <embed 
-        src="..assets/planejamento/pdfs/DESGOSTO  APRESENTAÇÃO FINAL (2).pdf"
-        type="application/pdf">
+      <iframe 
+        src="../assets/planejamento/pdfs/desgosto_apresentacao_final.pdf"
+        loading="lazy">
+      </iframe>
     </section>
 
     <!-- BOTÃO -->
     <section class="project-links">
-      <a href="#" class="external-link">MATERIAIS EXTRAS</a>
+      <a 
+        href="https://drive.google.com/drive/folders/1clgWWcE7TxLjR3Y-XyCU112R3gWr9AtO?usp=sharing"
+        target="_blank"
+        class="external-link">
+        MATERIAIS EXTRAS
+      </a>
     </section>
 
   </main>
