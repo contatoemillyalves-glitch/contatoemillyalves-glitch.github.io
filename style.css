@@ -14,7 +14,7 @@ body {
   color: #f8f6f0;
 }
 
-/* HEADER FIXO */
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
@@ -38,7 +38,6 @@ body {
   text-decoration: none;
   color: #f8f6f0;
   font-size: 16px;
-  letter-spacing: 1px;
 }
 
 /* FOOTER */
@@ -69,41 +68,51 @@ body {
   object-fit: cover;
 }
 
-/* TÍTULO + BOX */
+/* HEADER DO PROJETO */
 .project-header {
   margin: 0 64px 120px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 64px;
+  gap: 80px;
 }
 
-/* TÍTULO */
+/* TÍTULO + SUBTÍTULO */
+.project-title-group {
+  flex: 1;
+}
+
 .project-main-title {
   font-size: 96px;
   letter-spacing: -6px;
   text-transform: uppercase;
   line-height: 0.95;
-  flex: 1;
+}
+
+.project-subtitle {
+  margin-top: 24px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  max-width: 520px;
 }
 
 /* BOX */
 .project-info-box {
-  padding: 48px;
+  padding: 56px;
   border: 1px solid #f8f6f0;
-  max-width: 520px;
+  max-width: 640px;
 }
 
 .project-info-box h2 {
   font-size: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .project-info-box p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* PDF */
@@ -130,7 +139,6 @@ body {
   border: 1px solid #f8f6f0;
   color: #f8f6f0;
   text-decoration: none;
-  letter-spacing: 1px;
 }
 
 .external-link:hover {
@@ -146,5 +154,9 @@ body {
 
   .project-main-title {
     font-size: 56px;
+  }
+
+  .project-info-box {
+    max-width: 100%;
   }
 }
