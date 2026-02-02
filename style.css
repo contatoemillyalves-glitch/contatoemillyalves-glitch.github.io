@@ -130,125 +130,55 @@ body {
   }
 }
 
+/* EVITA SCROLL HORIZONTAL */
+html, body {
+  overflow-x: hidden;
+}
+
 /* ===========================
-   PÁGINA DE PROJETO (ISOLADA)
+   HEADER DO PROJETO
 =========================== */
 
-.project-page {
-  padding-top: 140px;
-}
-
-/* CAPA */
-.project-page .project-cover {
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.project-page .project-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.project-header {
+  margin: 120px 64px 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 64px;
 }
 
 /* TÍTULO */
-.project-page .project-title {
-  padding: 120px 64px 64px;
-}
-
-.project-page .project-title h1 {
+.project-main-title {
   font-size: 96px;
   letter-spacing: -6px;
   text-transform: uppercase;
+  line-height: 0.95;
+  flex: 1;
 }
 
-/* BOX DE INFO */
-.project-page .project-info-box {
-  margin: 0 64px 96px;
+/* BOX */
+.project-header .project-info-box {
+  margin: 0;
   padding: 48px;
   border: 1px solid #f8f6f0;
-  max-width: 900px;
+  max-width: 520px;
 }
 
-.project-page .project-info-box h2 {
-  font-size: 28px;
+.project-header .project-info-box h2 {
+  font-size: 24px;
   margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.project-page .project-info-box p {
+.project-header .project-info-box p {
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* TEXTO */
-.project-page .project-description {
-  margin: 0 64px 96px;
-  max-width: 800px;
-}
-
-.project-page .project-description p {
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-/* PDF */
-.project-page .project-pdf {
-  margin: 0 64px 96px;
-  height: 90vh;
-  border: 1px solid #f8f6f0;
-  background: #000;
-}
-
-.project-page .project-pdf iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* BOTÃO */
-.project-page .project-links {
-  margin: 0 64px 160px;
-}
-
-.project-page .external-link {
-  display: inline-block;
-  padding: 16px 32px;
-  border: 1px solid #f8f6f0;
-  color: #f8f6f0;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.project-page .external-link:hover {
-  background: #f8f6f0;
-  color: #000;
-}
-
-/* ===========================
-   CAPA COM MARGEM (IGUAL HOME)
-=========================== */
-
-.project-cover-wrapper {
-  padding: 0 64px;
-}
-
+/* CAPA ALINHADA COM PDF */
 .project-page .project-cover {
-  width: 100%;
+  margin: 0 64px 96px;
   height: 90vh;
   overflow: hidden;
-}
-
-.project-page .project-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* PDF COM IFRAME (mais confiável) */
-.project-page .project-pdf iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
 }
