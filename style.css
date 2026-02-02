@@ -223,3 +223,30 @@ body {
   background: #f8f6f0;
   color: #000;
 }
+
+/* ===========================
+   CAPA COM MARGEM (IGUAL HOME)
+=========================== */
+
+.project-cover-wrapper {
+  padding: 0 64px;
+}
+
+.project-page .project-cover {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.project-page .project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PDF COM IFRAME (mais confiável) */
+.project-page .project-pdf iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
