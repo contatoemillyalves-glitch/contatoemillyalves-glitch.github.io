@@ -96,21 +96,21 @@ body {
 
 .project-text h2 {
   font-size: 42px;
-  letter-spacing: 1px;
+  letter-spacing: -3px;
 }
 
 .project-text p {
   margin-top: 8px;
   max-width: 420px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* FOOTER (APARECE NO FIM) */
 .footer {
   padding: 64px;
   text-align: center;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 16px;
+  letter-spacing: -1px;
 }
 
 /* MOBILE */
