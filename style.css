@@ -130,80 +130,93 @@ body {
   }
 }
 
-/* =========================
-   PROJECT PAGE — DESGOSTO
-========================= */
-
+/* PÁGINA DE PROJETO */
 .project-page {
-  padding-top: 160px; /* espaço por causa do header fixo */
-  background: #000;
-  color: #f8f6f0;
+  padding-top: 140px; /* compensa header fixo */
 }
 
-/* HERO */
-.project-hero {
-  padding: 0 64px 120px;
-  max-width: 1200px;
+/* CAPA */
+.project-cover {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
 }
 
-.project-hero h1 {
-  font-size: 110px;
-  letter-spacing: -4px;
-  margin-bottom: 24px;
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.project-hero h2 {
-  font-size: 28px;
-  letter-spacing: 1px;
-  margin-bottom: 32px;
+/* TÍTULO */
+.project-title {
+  padding: 120px 64px 64px;
+}
+
+.project-title h1 {
+  font-size: 96px;
+  letter-spacing: -6px;
   text-transform: uppercase;
 }
 
-.project-hero p {
-  max-width: 720px;
+/* BOX DE INFO */
+.project-info-box {
+  margin: 0 64px 96px;
+  padding: 48px;
+  border: 1px solid #f8f6f0;
+  max-width: 900px;
+}
+
+.project-info-box h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-info-box p {
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* PDF */
-.project-pdf {
-  padding: 0 64px;
+/* TEXTO */
+.project-text {
+  margin: 0 64px 96px;
+  max-width: 800px;
 }
 
-.project-pdf embed {
-  width: 100%;
+.project-text p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* PDF */
+.project-pdf {
+  margin: 0 64px 96px;
   height: 90vh;
   border: 1px solid #f8f6f0;
 }
 
-/* LINK */
-.project-links {
-  padding: 120px 64px;
+.project-pdf embed {
+  width: 100%;
+  height: 100%;
 }
 
-.project-button {
+/* BOTÃO */
+.project-links {
+  margin: 0 64px 160px;
+}
+
+.external-link {
   display: inline-block;
-  padding: 20px 48px;
+  padding: 16px 32px;
   border: 1px solid #f8f6f0;
   color: #f8f6f0;
   text-decoration: none;
-  font-size: 16px;
   letter-spacing: 1px;
-  transition: background 0.3s, color 0.3s;
 }
 
-.project-button:hover {
+.external-link:hover {
   background: #f8f6f0;
   color: #000;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .project-hero h1 {
-    font-size: 56px;
-  }
-
-  .project-pdf embed {
-    height: 70vh;
-  }
 }
