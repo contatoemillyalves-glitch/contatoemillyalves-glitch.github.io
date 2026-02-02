@@ -57,17 +57,14 @@ body {
 
 /* PROJECTS */
 .projects {
+  padding: 0 64px 64px;
   display: flex;
   flex-direction: column;
-}
-
-.projects {
-  padding: 0 48px;
-  gap: 48px;
+  gap: 64px;
 }
 
 .project {
-  margin-bottom: 48px;
+  height: calc(100vh - 64px);
 }
 
 /* PROJECT CARD */
