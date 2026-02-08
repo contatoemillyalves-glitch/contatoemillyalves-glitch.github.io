@@ -1,192 +1,101 @@
-/* ===========================
-   RESET
-=========================== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  background: #000;
-  color: #f8f6f0;
+  font-family: Georgia, serif;
+  color: #000;
+  background-color: #fff;
 }
 
-/* ===========================
-   HEADER
-=========================== */
-
+/* HEADER */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  padding: 32px 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.9);
+  padding: 32px 80px;
 }
 
-.header-name {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.header-nav a {
-  margin-left: 40px;
+.header nav a {
+  margin-left: 24px;
   text-decoration: none;
-  color: #f8f6f0;
-  font-size: 16px;
+  color: #000;
 }
 
-/* COMPENSA HEADER FIXO */
-body {
-  padding-top: 120px;
+/* CAPA */
+.capa-projeto {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
 }
 
-/* ===========================
-   HERO (HOME)
-=========================== */
-
-.hero {
-  padding: 180px 64px 200px;
+.capa-projeto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* REMOVE O ZOOM */
+  background: #fff;
 }
 
-.hero h1 {
-  font-size: 110px;
-  line-height: 0.95;
-  letter-spacing: -6px;
-  margin-bottom: 24px;
+.titulo-projeto {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  font-size: 48px;
+  font-weight: bold;
+  background: white;
+  padding: 8px 16px;
 }
 
-.hero p {
-  font-size: 16px;
+/* CONTAINER PADRÃO (MARGEM CORRIGIDA) */
+.container-projeto {
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+/* FRASE */
+.frase-projeto {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 80px;
   letter-spacing: 1px;
 }
 
-/* ===========================
-   PROJECTS (HOME)
-=========================== */
-
-.projects {
-  padding: 0 64px 96px;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
+/* SOBRE */
+.sobre-projeto h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
 }
 
-/* CARD */
-.project {
-  position: relative;
+.sobre-projeto p {
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* GALERIA */
+.galeria {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.galeria img,
+.galeria video {
   width: 100%;
-  height: 85vh;
-  overflow: hidden;
-  text-decoration: none;
-  color: #f8f6f0;
+  height: auto;
+  object-fit: contain; /* NÃO CORTA */
 }
 
-/* IMAGEM */
-.project img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* VÍDEO — SEM CORTAR */
-.project video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #000;
-}
-
-/* OVERLAY */
-.project::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-/* TEXTO SOBRE A CAPA */
-.project-overlay-text {
-  position: absolute;
-  bottom: 64px;
-  left: 64px;
-  right: 64px;
-  z-index: 2;
-}
-
-.project-overlay-text h2 {
-  font-size: 42px;
-  letter-spacing: -2px;
-}
-
-.project-overlay-text p {
-  margin-top: 12px;
-  max-width: 560px;
-  font-size: 18px;
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
+/* FOOTER */
 .footer {
-  padding: 64px;
+  margin-top: 160px;
+  padding: 40px 0;
   text-align: center;
-  font-size: 16px;
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media (max-width: 768px) {
-
-  .header {
-    padding: 24px;
-  }
-
-  .hero {
-    padding: 140px 24px 160px;
-  }
-
-  .hero h1 {
-    font-size: 56px;
-  }
-
-  .projects {
-    padding: 0 24px 64px;
-    gap: 48px;
-  }
-
-  .project {
-    height: 70vh;
-  }
-
-  .project-overlay-text {
-    left: 24px;
-    right: 24px;
-    bottom: 32px;
-  }
-
-  .project-overlay-text h2 {
-    font-size: 28px;
-  }
-
-  .project-overlay-text p {
-    font-size: 16px;
-  }
-
-  .footer {
-    padding: 48px 24px;
-  }
+  border-top: 1px solid #ddd;
+  font-size: 14px;
 }
