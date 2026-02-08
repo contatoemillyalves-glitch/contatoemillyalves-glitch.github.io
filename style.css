@@ -13,6 +13,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background: #000;
   color: #f8f6f0;
+  padding-top: 120px; /* COMPENSA HEADER FIXO */
 }
 
 /* ===========================
@@ -45,27 +46,27 @@ body {
 }
 
 /* ===========================
-   HERO (HOME)
+   HERO
 =========================== */
 
 .hero {
-  padding: 300px 64px 220px;
+  padding: 160px 64px 160px;
 }
 
 .hero h1 {
   font-size: 110px;
   line-height: 0.95;
   letter-spacing: -6px;
+  margin-bottom: 32px;
 }
 
 .hero p {
-  margin-top: 20px;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
 /* ===========================
-   PROJECTS (HOME)
+   PROJECTS
 =========================== */
 
 .projects {
@@ -78,8 +79,8 @@ body {
 /* CARD */
 .project {
   position: relative;
-  height: calc(100vh - 128px);
   width: 100%;
+  height: 80vh;
   overflow: hidden;
   text-decoration: none;
   color: #f8f6f0;
@@ -92,7 +93,7 @@ body {
   object-fit: cover;
 }
 
-/* VÍDEO — SEM ZOOM */
+/* VÍDEO */
 .project video {
   width: 100%;
   height: 100%;
@@ -108,8 +109,8 @@ body {
   background: rgba(0,0,0,0.45);
 }
 
-/* TEXTO */
-.project-text {
+/* TEXTO SOBRE A CAPA */
+.project-overlay-text {
   position: absolute;
   bottom: 72px;
   left: 64px;
@@ -117,12 +118,12 @@ body {
   z-index: 2;
 }
 
-.project-text h2 {
+.project-overlay-text h2 {
   font-size: 42px;
   letter-spacing: -2px;
 }
 
-.project-text p {
+.project-overlay-text p {
   margin-top: 12px;
   max-width: 560px;
   font-size: 18px;
@@ -146,43 +147,19 @@ body {
   padding-top: 140px;
 }
 
-/* CAPA */
-.project-cover {
-  margin: 0 64px 96px;
-  height: 90vh;
-  overflow: hidden;
+/* HERO DO PROJETO */
+.project-hero {
+  padding: 180px 64px 120px;
 }
 
-.project-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* HEADER DO PROJETO */
-.project-header {
-  margin: 0 64px 140px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 96px;
-}
-
-/* TÍTULO + SUB */
-.project-title-group {
-  flex: 1;
-}
-
-.project-main-title {
+.project-hero h1 {
   font-size: 96px;
   letter-spacing: -6px;
   text-transform: uppercase;
-  line-height: 0.95;
 }
 
 .project-subtitle {
   margin-top: 32px;
-  margin-bottom: 96px;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -190,55 +167,23 @@ body {
 }
 
 /* BOX */
-.project-info-box {
+.project-description-box {
+  margin: 0 64px 160px;
   padding: 64px;
   border: 1px solid #f8f6f0;
   max-width: 680px;
 }
 
-.project-info-box h2 {
+.project-description-box h3 {
   font-size: 24px;
   margin-bottom: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-.project-info-box p {
+.project-description-box p {
   font-size: 18px;
   line-height: 1.8;
-}
-
-/* PDF */
-.project-pdf {
-  margin: 0 64px 96px;
-  height: 90vh;
-  border: 1px solid #f8f6f0;
-}
-
-.project-pdf iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* BOTÃO */
-.project-links {
-  margin: 0 64px 160px;
-}
-
-.external-link {
-  display: inline-block;
-  padding: 16px 32px;
-  border: 1px solid #f8f6f0;
-  color: #f8f6f0;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.external-link:hover {
-  background: #f8f6f0;
-  color: #000;
 }
 
 /* ===========================
@@ -250,26 +195,16 @@ body {
     font-size: 56px;
   }
 
-  .project-text h2 {
+  .project-overlay-text h2 {
     font-size: 28px;
   }
 
-  .project-header {
-    flex-direction: column;
-    gap: 64px;
-  }
-
-  .project-main-title {
+  .project-hero h1 {
     font-size: 56px;
   }
 
-  .project-subtitle {
-    margin-bottom: 64px;
-    font-size: 18px;
-  }
-
-  .project-info-box {
-    max-width: 100%;
+  .project-description-box {
     padding: 40px;
+    margin: 0 24px 120px;
   }
 }
