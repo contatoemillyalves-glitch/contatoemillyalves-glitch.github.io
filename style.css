@@ -1,4 +1,6 @@
-/* RESET */
+/* ===========================
+   RESET
+=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background: #000;
   color: #f8f6f0;
-  padding-top: 120px; /* COMPENSA HEADER FIXO */
 }
 
 /* ===========================
@@ -45,19 +46,24 @@ body {
   font-size: 16px;
 }
 
+/* COMPENSA HEADER FIXO */
+body {
+  padding-top: 120px;
+}
+
 /* ===========================
-   HERO
+   HERO (HOME)
 =========================== */
 
 .hero {
-  padding: 160px 64px 160px;
+  padding: 180px 64px 200px;
 }
 
 .hero h1 {
   font-size: 110px;
   line-height: 0.95;
   letter-spacing: -6px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .hero p {
@@ -66,11 +72,11 @@ body {
 }
 
 /* ===========================
-   PROJECTS
+   PROJECTS (HOME)
 =========================== */
 
 .projects {
-  padding: 0 64px 64px;
+  padding: 0 64px 96px;
   display: flex;
   flex-direction: column;
   gap: 64px;
@@ -80,7 +86,7 @@ body {
 .project {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
   text-decoration: none;
   color: #f8f6f0;
@@ -93,7 +99,7 @@ body {
   object-fit: cover;
 }
 
-/* VÍDEO */
+/* VÍDEO — SEM CORTAR */
 .project video {
   width: 100%;
   height: 100%;
@@ -106,13 +112,13 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 /* TEXTO SOBRE A CAPA */
 .project-overlay-text {
   position: absolute;
-  bottom: 72px;
+  bottom: 64px;
   left: 64px;
   right: 64px;
   z-index: 2;
@@ -140,71 +146,47 @@ body {
 }
 
 /* ===========================
-   PÁGINA DE PROJETO
-=========================== */
-
-.project-page {
-  padding-top: 140px;
-}
-
-/* HERO DO PROJETO */
-.project-hero {
-  padding: 180px 64px 120px;
-}
-
-.project-hero h1 {
-  font-size: 96px;
-  letter-spacing: -6px;
-  text-transform: uppercase;
-}
-
-.project-subtitle {
-  margin-top: 32px;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-/* BOX */
-.project-description-box {
-  margin: 0 64px 160px;
-  padding: 64px;
-  border: 1px solid #f8f6f0;
-  max-width: 680px;
-}
-
-.project-description-box h3 {
-  font-size: 24px;
-  margin-bottom: 32px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.project-description-box p {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-/* ===========================
    MOBILE
 =========================== */
 
 @media (max-width: 768px) {
+
+  .header {
+    padding: 24px;
+  }
+
+  .hero {
+    padding: 140px 24px 160px;
+  }
+
   .hero h1 {
     font-size: 56px;
+  }
+
+  .projects {
+    padding: 0 24px 64px;
+    gap: 48px;
+  }
+
+  .project {
+    height: 70vh;
+  }
+
+  .project-overlay-text {
+    left: 24px;
+    right: 24px;
+    bottom: 32px;
   }
 
   .project-overlay-text h2 {
     font-size: 28px;
   }
 
-  .project-hero h1 {
-    font-size: 56px;
+  .project-overlay-text p {
+    font-size: 16px;
   }
 
-  .project-description-box {
-    padding: 40px;
-    margin: 0 24px 120px;
+  .footer {
+    padding: 48px 24px;
   }
 }
