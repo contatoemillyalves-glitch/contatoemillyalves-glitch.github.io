@@ -86,7 +86,7 @@ body {
 
 .galeria img,
 .galeria video {
-  width: 200%;
+  width: 100%;
   height: auto;
   object-fit: contain; /* NÃO CORTA */
 }
